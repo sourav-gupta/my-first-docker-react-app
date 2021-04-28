@@ -11,12 +11,12 @@ script:
   - docker run -e CI=true -t gsourav/my-first-docker-react-app npm run test
 
 deploy:
-  - provider: "elasticbeanstalk"
-  - region: "us-west-2"
-  - app: "my-docker-react-web-app"
-  - env: "Mydockerreactwebapp-env"
-  - bucket_name: "elasticbeanstalk-us-west-2-037856357894"
-  - bucket_path: "my-docker-react-web-app"
+  provider: "elasticbeanstalk"
+  region: "us-west-2"
+  app: "my-docker-react-web-app"
+  env: "Mydockerreactwebapp-env"
+  bucket_name: "elasticbeanstalk-us-west-2-037856357894"
+  bucket_path: "my-docker-react-web-app"
   on:
     branch: master
   access_key_id: "$AWS_ACCESS_KEY"
